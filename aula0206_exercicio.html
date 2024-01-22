@@ -10,15 +10,34 @@
 
   <script>
     //Pedir para jogador1 digitar um numero
-   var n1 = parseFloat(prompt("digite um numero"));
+   var njogador1 = prompt('aposta do 1º jogador');
+   njogador1 = parseFloat(njogador1);
    //Pedir para jogador2 digitar um numero
-    var n2 = parseFloat(prompt("digite outro numero"));
+    var njogador2 = parseFloat(prompt("aposta do 2º jogador"));
 
   //são iguais? Se sim: Mostra mensagem de empate e é fim do programa
-
+  if(njogador1 === njogador2){
+    prompt('Vocês empataram!')
+  } else {
+    //Se não:   sortear um numero de 0 ou 1
+        var nSorteado = parseInt(Math.random() * 2);
+    // é 0? Se não: se der 1: o jogador1 é > jogador2 ?
+        //se sim: ganha quem escolheu o numero MENOR (FIM DO PROGRAMA)
+        if(nSorteado === 0) {
+          if(njogador1 < njogador2) {
+            alert ("O JOGADOR 1 GANHOU!");
+          } else {
+            alert ("O JOGADOR 2 GANHOU!");
+          }
+        } else { //se não: jogador2 ganhou (FIM DO PROGRAMA)
+          if(njogador1 > njogador2) {
+            alert ("O JOGADOR 2 GANHOU!");
+          } else {
+            alert ("O JOGADOR 1 GANHOU!");
+          }
+        }    
+  };
   //Se não:  sortear um numero de 0 ou 1
-
-
     var media = (n1 + n2) / 2;
     alert(media > 5);
   </script>

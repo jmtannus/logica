@@ -9,18 +9,22 @@
   </body>
 
   <script>
-    var arr = new Array(25, 30, 45, 28, 0, 12, 78, 64);
+    var numeros = new Array(1, 2, 3, 4, 5, 6, 7, 8);
+    //mostrar a soma dos numeros pares no array acima.
+    var somandoPares = somaDosPares(numeros);
 
-    var soma = 0;
+    alert("A soma dos numeros pares é: " + somandoPares);
 
-    for(var i = 0; i<arr.length; i++){
+    function somaDosPares(arr) {
+      var soma = 0;
+      for (let i = 0; i < arr.length; i++) {
         console.log(i);
         console.log(arr[i]);
+        if (!isNaN(arr[i]) && arr[i] % 2 === 0) {
+          soma += arr[i];
+        }
+      }
+      return soma;
     }
-    if (!isNaN(arr[i]) && arr[i] % 2 === 0){
-        soma  += arr[i];
-    }
-    alert('A soma dos numeros pares é ' + soma);
   </script>
-
 </html>

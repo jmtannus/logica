@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Logica de Programação JavaScript </title>
+    </head>
+
+    <body>
+        <h1> Logica de Programação JavaScript</h1>
+        <button onclick="limpar()">AC</button>
+        <button onclick="obterPorcento()">%</button>
+        <button onclick="iniciarCalculo('*')">x</button>
+        
+    
+
+
+        
+        <div id="output"></div>
+        
+        <script>
+          var n1 = "0";
+          function incluirDigito(digito) {
+            if(n1 ==="0"){
+              n1 = digito;
+            } else {
+              n1 += digito;
+            }
+            mostrarNoDisplay(n1)
+          }
+
+          function mostrarNoDisplay(valor){
+            document.querySelector('#display').innerHTML = valor;
+          }
+          
+        </script> 
+        <!----https://cdn.webshopapp.com/shops/38765/files/63260234/450x450x2/geeek-bamboo-wooden-calculator-calculator.jpg-->
+    </body>
+</html>

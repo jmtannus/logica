@@ -1,3 +1,8 @@
+//*Sua missão será criar um array com três objetos. Cada objeto deverá ter duas
+propriedades (nome e email). Depois, basta mostrar na tela (melhor se for
+utilizando a div com id="output") e nome e o email de cada um dos objetos da
+array criada acima.*//
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,7 +11,24 @@
 
   <body>
     <h1>Logica de Programação JavaScript</h1>
+    <div id="output"></div>
   </body>
 
-  <script></script>
+  <script>
+    var produtos = [
+      { nome: "caneta", preco: 2 },
+      { nome: "lápis", preco: 1.2 },
+      { nome: "borracha", preco: 0.5 },
+    ];
+    var msg = "";
+
+    for (let i = 0; i < produtos.length; i++) {
+      console.log(produtos[i]);
+
+      msg += "<h2>Produto: " + produtos[i].nome + "</h2>";
+      msg += "<p>preço: " + produtos[i].preco + "</p><br>";
+    }
+
+    document.querySelector("#output").innerHTML = msg;
+  </script>
 </html>

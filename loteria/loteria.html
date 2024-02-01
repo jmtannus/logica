@@ -30,12 +30,8 @@
 
             for (var i = 0; i < meusNumeros.length; i++) {
                   msg += '<p> ' + meusNumeros[i] + ': ';
-                        if (sorteados.indexOf(meusNumeros[i]) === -1) {
-                              msg += 'errou'                            
-                        } else {
-                              msg +=  'acertou'
-                        }
-                        msg += '</p>'
+                  msg += (sorteados.indexOf(meusNumeros[i]) === -1)  ? 'errou ' : 'acertou'
+                  msg += '</p>'
             }
 
             output.innerHTML  = msg;

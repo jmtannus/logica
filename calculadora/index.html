@@ -66,14 +66,18 @@
       }
 
       function obterPorcento(){
-        if (!n2) {
-          n2 = ' ';
-          mostrarNoDisplay(n1)
-        } else {
-          var porcento = n1 * n2 / 100;
-          n2 = porcento;
-          mostrarNoDisplay(n2) ;
-        }
+          if(!n2){
+              limpar();
+              mostrarNoDisplay(n1);
+          } else {
+              if(operacao === "+" || operacao === "-"){
+                  var porcento = n1 * n2 / 100;    
+              } else {
+                  var porcento = n2 / 100;
+              }
+              n2 = porcento;
+              mostrarNoDisplay(n2);
+          }
       }
 
       function calcular() {

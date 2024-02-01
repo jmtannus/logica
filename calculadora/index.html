@@ -58,6 +58,17 @@
         console.log("n1", n1, "operacao", operacao, "n2", n2);
       }
 
+      function obterPorcento(){
+        if (!n2) {
+          n2 = ' ';
+          mostrarNoDisplay(n1)
+        } else {
+          var porcento = n1 * n2 / 100;
+          n2 = porcento;
+          mostrarNoDisplay(n2) ;
+        }
+      }
+
       function calcular() {
         var nCalculado = "0";
         var _n1 = parseFloat(n1);

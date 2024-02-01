@@ -36,6 +36,13 @@
       var n2 = " ";
 
       function incluirDigito(digito) {
+        if (n2 && clicadoEmIgual && operacao === true) {
+          clicadoEmIgual  = false;
+          limpar();
+          n1 = digito;
+          mostrarNoDisplay(n1);
+          return;
+        }
         if (operacao !== null) {
           n2 = n2 + digito;
           mostrarNoDisplay(n2);
